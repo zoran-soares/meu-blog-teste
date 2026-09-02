@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: zoran-soares/meu-blog-teste
+  branch: main
+
+media_folder: "imagens"
+public_folder: "/imagens"
+
+collections:
+  - name: "blog"
+    label: "Artigos de Teste"
+    label_singular: "Artigo"
+    folder: "posts"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título do Artigo", name: "titulo", widget: "string" }
+      - { label: "Resumo da Chamada", name: "resumo", widget: "text" }
+      - { label: "Data de Publicação", name: "data", widget: "datetime", format: "YYYY-MM-DD HH:mm" }
+      - { label: "Imagem de Capa", name: "imagem", widget: "image", required: false }
+      - { label: "Corpo do Texto", name: "body", widget: "markdown" }

@@ -1,0 +1,8 @@
+{
+  "name": "meu-blog-teste",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "cms": "npx decap-server"
+  }
+}
