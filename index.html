@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Meu Blog Teste</title>
+    </script>
 </head>
 <body>
     <h1>Ambiente de Testes Ativo</h1>
     <a href="blog.html">Ir para o Blog</a>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
