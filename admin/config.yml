@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: zoran-soares/meu-blog-teste
-  branch: main
+  name: git-gateway
+    branch: main
 
 media_folder: "imagens"
 public_folder: "/imagens"
